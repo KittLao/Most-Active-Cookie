@@ -5,12 +5,20 @@ Program that reads in a csv file of cookie logs and find the most active one giv
 # Instructions
 
 To run the program with a particular log file,  run the command 
+
 ``` python3 src/most_active_cookie -f <path/to/file> ```.
 
 To tun the test cases, change directory into tests and run the command 
+
 ``` python3 test.py ```
 
 # Design
+
+To maintain production level code (or atleast my best attempt at it), I made sure to approach this using
+OOP and modularize each component to it's own file. Initially, I wanted to design my database using a 
+hash table to map a date to a the cookie sesssions on that day. This would work for only a specific query 
+type. So so make the database more robust, I redesigned it using a more complex datastructure to handle 
+more types of querying.
 
 ## most_active_cookie.py
 
