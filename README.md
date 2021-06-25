@@ -6,7 +6,7 @@ Program that reads in a csv file of cookie logs and find the most active one giv
 
 To run the program with a particular log file,  run the command 
 
-``` python3 src/most_active_cookie -f <path/to/file> ```.
+``` python3 src/most_active_cookie <path/to/file> -d <some query> ```.
 
 To tun the test cases, change directory into tests and run the command 
 
