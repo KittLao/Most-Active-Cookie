@@ -1,0 +1,30 @@
+[
+    {
+        "test_num": 0,
+        "log_csv": "cookie_log.csv",
+        "-d": "2018-12-09",
+        "output_file": "test_0_out.txt",
+        "answer_file": "test_0_ans.txt"
+    },
+    {
+        "test_num": 1,
+        "log_csv": "cookie_log.csv",
+        "-d": "2018-12-08",
+        "output_file": "test_1_out.txt",
+        "answer_file": "test_1_ans.txt"
+    },
+    {
+        "test_num": 2,
+        "log_csv": "cookie_log.csv",
+        "-d": "2018-12-07",
+        "output_file": "test_2_out.txt",
+        "answer_file": "test_2_ans.txt"
+    },
+    {
+        "test_num": 3,
+        "log_csv": "cookie_log.csv",
+        "-d": "2018-12-06",
+        "output_file": "test_3_out.txt",
+        "answer_file": "test_3_ans.txt"
+    }
+]
