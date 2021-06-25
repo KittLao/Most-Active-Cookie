@@ -31,6 +31,9 @@ def main():
     query = Query(day, "-d", '-')
     most_active = cookie_jar.get_most_active(query)
 
+    if len(most_active) == 0:
+        print("No cookies were active.")
+        
     for cookie in most_active:
         print(cookie)
 
