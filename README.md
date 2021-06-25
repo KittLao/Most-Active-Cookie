@@ -4,6 +4,40 @@ Program that reads in a csv file of cookie logs and find the most active one giv
 
 # Instructions
 
-To run the program with a particular log file,  run the command ``` python3 src/most_active_cookie -f <path/to/file> ```.
+To run the program with a particular log file,  run the command 
+``` python3 src/most_active_cookie -f <path/to/file> ```.
 
-To tun the test cases, change directory into tests and run the command ``` python3 test.py ```
+To tun the test cases, change directory into tests and run the command 
+``` python3 test.py ```
+
+# Design
+
+## most_active_cookie.py
+
+- Parses command line arguments.
+- Reads csv file.
+- Initializes database and performs the querying.
+
+## CookieSession
+
+Each cookie activity will be it's own object. The cookie identification and timestamp is stored.
+
+## Query
+
+The query is the request for information from the database. It is instantiated with the command 
+line arguments. Queries also have a type, that will depend on the options provided.
+
+## Database
+
+The database stores all cookie sessions and is designed using the [trie](https://en.wikipedia.org/wiki/Trie) 
+data structure. To instantiate the trie, a Node object is used. This database supports insertion and getting
+the most active cookie by date.
+
+## Node
+
+This is the actual node for the trie. They keys that map to the childens are the keys from the timestamp 
+(year/month/day, etc...). Each node will also store the cookie sessions for the current node and all it's
+children. For the purpose of getting the most active cookie for a particular date, the data structure used
+to hold the cookie sessions is a hash table that maps the cookie ID to the list of cookie sessions present.
+
+
